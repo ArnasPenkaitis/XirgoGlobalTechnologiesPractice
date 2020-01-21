@@ -1,0 +1,16 @@
+C:\Users\Arnas\Desktop\XirgoGlobalTechnologies\XirgoPractice\XirgoPractice\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\Arnas\Desktop\XirgoGlobalTechnologies\XirgoPractice\XirgoPractice\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\Arnas\Desktop\XirgoGlobalTechnologies\XirgoPractice\XirgoPractice\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\Arnas\Desktop\XirgoGlobalTechnologies\XirgoPractice\XirgoPractice\bin\Debug\netcoreapp2.1\XirgoPractice.deps.json
+C:\Users\Arnas\Desktop\XirgoGlobalTechnologies\XirgoPractice\XirgoPractice\bin\Debug\netcoreapp2.1\XirgoPractice.runtimeconfig.json
+C:\Users\Arnas\Desktop\XirgoGlobalTechnologies\XirgoPractice\XirgoPractice\bin\Debug\netcoreapp2.1\XirgoPractice.runtimeconfig.dev.json
+C:\Users\Arnas\Desktop\XirgoGlobalTechnologies\XirgoPractice\XirgoPractice\bin\Debug\netcoreapp2.1\XirgoPractice.dll
+C:\Users\Arnas\Desktop\XirgoGlobalTechnologies\XirgoPractice\XirgoPractice\obj\Debug\netcoreapp2.1\XirgoPractice.csprojAssemblyReference.cache
+C:\Users\Arnas\Desktop\XirgoGlobalTechnologies\XirgoPractice\XirgoPractice\obj\Debug\netcoreapp2.1\XirgoPractice.RazorAssemblyInfo.cache
+C:\Users\Arnas\Desktop\XirgoGlobalTechnologies\XirgoPractice\XirgoPractice\obj\Debug\netcoreapp2.1\XirgoPractice.RazorAssemblyInfo.cs
+C:\Users\Arnas\Desktop\XirgoGlobalTechnologies\XirgoPractice\XirgoPractice\obj\Debug\netcoreapp2.1\XirgoPractice.AssemblyInfoInputs.cache
+C:\Users\Arnas\Desktop\XirgoGlobalTechnologies\XirgoPractice\XirgoPractice\obj\Debug\netcoreapp2.1\XirgoPractice.AssemblyInfo.cs
+C:\Users\Arnas\Desktop\XirgoGlobalTechnologies\XirgoPractice\XirgoPractice\obj\Debug\netcoreapp2.1\XirgoPractice.RazorTargetAssemblyInfo.cache
+C:\Users\Arnas\Desktop\XirgoGlobalTechnologies\XirgoPractice\XirgoPractice\bin\Debug\netcoreapp2.1\XirgoPractice.pdb
+C:\Users\Arnas\Desktop\XirgoGlobalTechnologies\XirgoPractice\XirgoPractice\obj\Debug\netcoreapp2.1\XirgoPractice.dll
+C:\Users\Arnas\Desktop\XirgoGlobalTechnologies\XirgoPractice\XirgoPractice\obj\Debug\netcoreapp2.1\XirgoPractice.pdb

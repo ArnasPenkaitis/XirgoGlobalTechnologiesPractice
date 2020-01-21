@@ -1,0 +1,77 @@
+<router-outlet>
+    <mat-toolbar style="height: 6%; background: black; color: white; display: flex;" >
+      <span style="margin-right: auto;">Xirgo Practice Tracking System</span>
+      <div style=" margin-right: 1rem; border-left: 1px solid white; display: contents;">
+        <span style="margin-right: 0.5rem;">Add new vehicle with name:</span>
+        <mat-form-field style="margin-right: 1rem;">
+          <input matInput (keyup)="onKey($event)" [value]="newCarInput">
+        </mat-form-field>
+        <button mat-flat-button  (click)="onCreateVehicleButtonClicked()">Add vehicle</button>
+      </div>
+    </mat-toolbar>
+  <div class="container" style="height: 94%; width: 100%;">
+    <div style="height: 47%;">
+      <div style="float: left; width: 50%; height: 100%;" >
+        <mat-list style="padding: 0; border-right: 1px solid black;">
+          <mat-list-item style="background: gray; border-bottom: 1px solid black;">
+            <div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+              <div style="width: 5%; font-size: 1.5vw; font-weight: bold;">#</div>
+              <div style="width: 95%; font-size: 1.5vw; font-weight: bold;">Vehicles</div>
+            </div>
+          </mat-list-item>
+        </mat-list>
+        <mat-list role="list" style="padding: 0; height: 87%; background: lightgray;  border-right: 1px solid black; max-height: 100%; overflow: auto;" >
+          <div *ngIf="vehiclesList.length > 0">
+              <a mat-list-item  *ngFor="let vehicle of vehiclesList; let i = index" (click)="onVehicleSelect(vehicle)" role="listitem" style=" cursor: pointer;background: lightgray; border-bottom: 1px solid black;" >
+                <span style="width: 5%; font-size: 1.5vw;">#{{i+1}}</span>
+                <span style="width: 95%; font-size: 1.5vw; margin-left: 5px;">{{vehicle.name}}</span>
+              </a>
+          </div>
+          <div *ngIf="vehiclesList.length == 0">
+            <mat-list-item role="listitem" style="background: lightgray; font-size: 1.5vw;" >There is no vehicles added to system.</mat-list-item>
+          </div>
+        </mat-list>
+      </div>
+      <div style="float: left; width: 50%; height: 100%;">
+        <mat-list style="padding: 0; border-right: 1px solid black;">
+          <mat-list-item role="listitem" style="background: gray; border-bottom: 1px solid black; " >
+            <div style="width: 25%; font-size: 1.5vw; font-weight: bold;">Device Reports</div>
+            <div style="width: 25%; text-align: center; font-size: 1.5vw; font-weight: bold;">Latitude</div>
+            <div style="width: 25%; text-align: center; font-size: 1.5vw; font-weight: bold;">Longitude</div>
+            <div style="width: 25%; text-align: center; font-size: 1.5vw; font-weight: bold;">Speed</div>
+          </mat-list-item>
+        </mat-list>
+        <mat-list role="list" style="padding: 0; height: 87%; background: lightgray; overflow: auto;">
+          <div *ngIf="selectedVehicle == null">
+            <mat-list-item role="listitem" style="background: lightgray; font-size: 1.5vw;" >There is no selected vehicle.</mat-list-item>
+          </div>
+          <div *ngIf="selectedVehicle != null">
+            <div *ngIf="selectedVehiclesDeviceRecords.length > 0">
+              <mat-list-item  *ngFor="let record of selectedVehiclesDeviceRecords; let i = index" role="listitem" style="background: lightgray; border-bottom: 1px solid black;" >
+                <div style="width: 25%; align-items: center; justify-content: center; font-size: 1.5vw;">#{{i+1}}</div>
+                <div style="width: 25%; align-items: center; justify-content: center; text-align: center; font-size: 1.5vw;">{{record.latitude}}</div>
+                <div style="width: 25%; align-items: center; justify-content: center; text-align: center; font-size: 1.5vw;">{{record.longitude}}</div>
+                <div style="width: 25%; align-items: center; justify-content: center; text-align: center; font-size: 1.5vw;">{{record.speed}}</div>
+              </mat-list-item>
+            </div>
+            <div *ngIf="selectedVehiclesDeviceRecords.length == 0">
+              <mat-list-item role="listitem" style="background: lightgray; font-size: 1.5vw;" >
+                <span>There is no device records added to system for </span>
+
+                <span style="font-weight: bold; margin-left: 5px;"> {{selectedVehicle.name}}</span>
+              </mat-list-item>
+            </div>
+          </div>
+        </mat-list>
+      </div>
+    </div>
+    <div style="float: left; width: 100%; height: 53%;  box-shadow: 0 -10px 10px -9px black;" >
+      <agm-map [latitude]="selectedLatitude" [longitude]="selectedLongitude" [zoom]="mapZoom" [streetViewControl]="false" [usePanning]="true" style="height: 100%;">
+        <div *ngIf="selectedLatitude != 0 && selectedLongitude != 0">
+          <agm-marker [latitude]="selectedLatitude" [longitude]="selectedLongitude" [label]="{color: 'black', fontSize: '14px',
+          fontWeight: 'bold', text: selectedVehicle.name}"></agm-marker>
+        </div>
+      </agm-map>
+    </div>
+  </div>
+</router-outlet>
